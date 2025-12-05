@@ -442,7 +442,7 @@ def main(use_yolo, use_remote_computer, exposure):
             print()
 
             if use_yolo:
-                toy_name = 'Tennis Ball'
+                toy_name = 'Cup'
             else:
                 toy_name = 'ArUco Cube'
             if toy_target is None:

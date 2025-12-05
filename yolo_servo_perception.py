@@ -39,7 +39,7 @@ class YoloServoPerception():
             self.masks_available = True
 
         self.model = YOLO(self.model_name)
-        self.example_tennis_ball_diameter = 0.0658
+        self.example_tennis_ball_diameter = 0.090
         
         self.marker_info = {}
         with open('aruco_marker_info.yaml') as f:
@@ -80,7 +80,7 @@ class YoloServoPerception():
                 masks = yolo_results.masks.xy
             for i, box in enumerate(boxes):
                 class_name = names[box.cls[0]]
-                if class_name in ['apple', 'sports ball']:
+                if class_name in ['cup']:
 
                     box_min_x, box_min_y, box_max_x, box_max_y = box.xyxy[0]
                     box_width_x = box_max_x - box_min_x
